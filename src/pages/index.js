@@ -15,16 +15,18 @@ const IndexPage = ({ data: {
     return (
         <Layout>
             <SEO title="home" />
-            <div>
-                {previews}
-            </div>
+            <section id="workPreviews">
+                <div className="browser-grid">
+                    {previews}
+                </div>
+            </section>
         </Layout>
     )}
 
 export default IndexPage
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___rank] }) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___rank] }) {
       edges {
         node {
           id
@@ -34,6 +36,13 @@ export const pageQuery = graphql`
             path
             title
             tags
+            featureImage {
+              childImageSharp {
+                fluid(maxWidth: 1200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

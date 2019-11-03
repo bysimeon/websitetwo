@@ -641,7 +641,7 @@ pre tt:after {
 }
 
 .med-padding {
-  padding: .5em;
+  padding: .5em 1em;
 }
 
 #aboutToggle {
@@ -650,6 +650,78 @@ pre tt:after {
   margin: 0;
   border: 0;
   padding: 0;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.browser-grid {
+  margin: 5vh;
+  display: grid;
+  grid-gap: 5vh;
+  grid-template-columns: 33vw 33vw;
+  grid-template-rows: 22vw 22vw;
+  padding: 10px;
+}
+.browser {
+  border: 1px solid black;
+  border-radius: 1px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.browser:hover .browser-tab {
+  background-color: #000;
+}
+
+.browser:hover .browser-tab-button {
+  background: white;
+  border-color: white;
+}
+
+.browser:hover .browser-content-image {
+  opacity: 100%;
+}
+
+.browser-tab {
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 14px;
+  display: flex;
+  transition-delay: 15ms;
+  transition: background-color 100ms ease-in;
+
+}
+.browser-tab-button {
+  border: 1px solid black;
+  background: black;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  margin: 4px 2px;
+  transition-delay: 15ms;
+  transition: background-color 100ms ease-in;
+}
+.browser-tab-button:first-child {
+  margin-left: 6px;
+}
+.browser-grid a {
+    text-decoration: none;
+}
+.browser-content-title {
+  position: absolute;
+  top: .5em;
+  padding: .5em;
+  font-size: 2em;
+  color:  black;
+}
+.browser-content-image {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  opacity: 0%;
+  transition-delay: 15ms;
+  transition: opacity 100ms ease-in;
 }
