@@ -1,8 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 
-const Project = ({data}) => {
-    const project = data
+const ProjectPreview = ({data}) => {
+    const project = data.frontmatter
     return (
         <div className="browser">
             <div className="browser-tab">
@@ -11,12 +11,14 @@ const Project = ({data}) => {
                 <div className="browser-tab-button"></div>
             </div>
             <div className="browser-content">
-                <div className="browser-content-title">
-                    {project.title}
-                </div>
+                <Link to={project.path}>
+                    <div className="browser-content-title">
+                        {project.title}
+                    </div>
+                </Link>
             </div>
         </div>
     )
 }
 
-export default Project
+export default ProjectPreview

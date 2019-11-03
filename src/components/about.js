@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+// import { useStaticQuery, graphql, Link } from "gatsby"
 
 const About = ({data}) => {
 
@@ -10,7 +10,7 @@ const About = ({data}) => {
                     simeon
                 </h1>
                 <p className="large-text inline">
-                    {" "}a full stack developer interested in the ways that internet use can change the ways that we think, percieve, behave, identify and learn.
+                    {" "}is a full stack developer interested in the ways that internet use can change the ways that we think, percieve, behave, identify and learn.
                 </p>
             </div>
             <button id="aboutToggle">
