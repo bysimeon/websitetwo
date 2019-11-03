@@ -685,6 +685,10 @@ pre tt:after {
   opacity: 100%;
 }
 
+.browser:hover .browser-content-title {
+  display: none;
+}
+
 .browser-tab {
   border-bottom: 1px solid black;
   width: 100%;
