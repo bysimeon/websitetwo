@@ -655,12 +655,11 @@ pre tt:after {
 }
 
 .browser-grid {
-  margin: 5vh;
+  margin: 5vh 0 5vh 5vh;
   display: grid;
   grid-gap: 5vh;
   grid-template-columns: 33vw 33vw;
   grid-template-rows: 22vw 22vw;
-  padding: 10px;
 }
 .browser {
   border: 1px solid black;
@@ -670,6 +669,12 @@ pre tt:after {
   margin: auto;
   overflow: hidden;
   position: relative;
+}
+
+.browser picture {
+  opacity: 0;
+  transition-delay: 15ms;
+  transition: opacity 100ms ease-in;
 }
 
 .browser:hover .browser-tab {
@@ -682,7 +687,11 @@ pre tt:after {
 }
 
 .browser:hover .browser-content-image {
-  opacity: 100%;
+  opacity: 100;
+}
+
+.browser:hover picture {
+  opacity: 100;
 }
 
 .browser:hover .browser-content-title {
@@ -728,4 +737,22 @@ pre tt:after {
   opacity: 0%;
   transition-delay: 15ms;
   transition: opacity 100ms ease-in;
+}
+
+.eight-two {
+  grid-template-columns: 8fr 2fr;
+}
+.grid {
+  display: grid;
+}
+
+.list {
+  margin: 5vh 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.list div {
+  border: solid black 1px;
+  padding: .25em;
 }

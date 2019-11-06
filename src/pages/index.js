@@ -9,17 +9,24 @@ const IndexPage = ({ data: {
     allMarkdownRemark: { edges },
 }}) => {
     const previews = edges
-        // .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+        .filter(edge => !!edge.node.frontmatter) // you can filter your posts based on some criteria
         .map(edge => <ProjectPreview key={edge.node.id} data={edge.node} />)
     
     return (
         <Layout>
             <SEO title="home" />
-            <section id="workPreviews">
-                <div className="browser-grid">
-                    {previews}
-                </div>
-            </section>
+            <div className=" grid eight-two">
+                <section id="workPreviews">
+                    <div className="browser-grid">
+                        {previews}
+                    </div>
+                </section>
+                <section id="recentPreview">
+                    {/* <div className="list">
+                        <div className="list-item"> testing testing </div>
+                    </div> */}
+                </section>
+            </div>
         </Layout>
     )}
 
