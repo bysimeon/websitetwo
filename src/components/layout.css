@@ -659,7 +659,7 @@ pre tt:after {
   display: grid;
   grid-gap: 5vh;
   grid-template-columns: 33vw 33vw;
-  grid-template-rows: 22vw 22vw;
+  grid-template-rows: 22vw 22vw 22vw 22vw;
 }
 .browser {
   border: 1px solid black;
