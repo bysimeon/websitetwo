@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <About />
-            <div>
+            <div className="eight-two">
                 <main>{children}</main>
             </div>
         </>

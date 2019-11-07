@@ -6,7 +6,7 @@ import ProjectPreview from "../components/preview"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data: {
-    allMarkdownRemark: { edges },
+    allMdx: { edges },
 }}) => {
     const previews = edges
         .filter(edge => !!edge.node.frontmatter) // you can filter your posts based on some criteria
@@ -15,25 +15,23 @@ const IndexPage = ({ data: {
     return (
         <Layout>
             <SEO title="home" />
-            <div className=" grid eight-two">
-                <section id="workPreviews">
-                    <div className="browser-grid">
-                        {previews}
-                    </div>
-                </section>
-                <section id="recentPreview">
-                    {/* <div className="list">
+            <section id="workPreviews">
+                <div className="browser-grid">
+                    {previews}
+                </div>
+            </section>
+            <section id="recentPreview">
+                {/* <div className="list">
                         <div className="list-item"> testing testing </div>
                     </div> */}
-                </section>
-            </div>
+            </section>
         </Layout>
     )}
 
 export default IndexPage
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___rank] }) {
+    allMdx(sort: { order: ASC, fields: [frontmatter___rank] }) {
       edges {
         node {
           id

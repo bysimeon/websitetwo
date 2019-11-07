@@ -4,8 +4,8 @@ import React from "react"
 const About = ({data}) => {
 
     return (
-        <section id="about">
-            <div id="written" className="med-padding">
+        <section id="about" className="sticky-top">
+            <div id="written" className="med-padding bg-wh">
                 <h1 className="large-text inline bold">
                     simeon
                 </h1>
@@ -13,10 +13,12 @@ const About = ({data}) => {
                     {" "}is a full stack developer* interested in the ways that internet use can change the ways that we think, percieve, behave, identify and learn.
                 </p>
             </div>
-            <button id="aboutToggle">
-            </button>
+            <div id="about-toggle" className="about-toggle">
+                
+            </div>
         </section>
     )
 }
 
 export default About
+

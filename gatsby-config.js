@@ -23,16 +23,25 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-remark-images",
-            options: {
-                maxWidth: 1200,
-            },
-        },
-        {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "markdown",
                 path: `${__dirname}/src/markdown`,
+            },
+        },
+        "gatsby-transformer-remark",
+        {
+            resolve: "gatsby-plugin-mdx",
+            options: {
+                gatsbyRemarkPlugins: [
+                    {
+                        resolve: "gatsby-remark-images",
+                        options: {
+                            maxWidth: 1200,
+                            linkImagesToOriginal: false
+                        },
+                    },
+                ],
             },
         },
         {
@@ -42,7 +51,6 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-        "gatsby-transformer-remark",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -7,19 +7,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const result = await graphql(`
       {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___rank] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              path
+        allMdx(sort: {order: DESC, fields: [frontmatter___rank]}, limit: 1000) {
+          edges {
+            node {
+              frontmatter {
+                path
+                rank
+              }
             }
           }
         }
       }
-    }
   `)
 
     // Handle errors
@@ -28,7 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         return
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    result.data.allMdx.edges.forEach(({ node }) => {
         createPage({
             path: node.frontmatter.path,
             component: projectTemplate,
