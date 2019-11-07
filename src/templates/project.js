@@ -28,6 +28,11 @@ const Project = ({ data }) => {
                 }}
             >
                 <section id={frontmatter.title} className="project__container">
+                    <h1 className="project__h1">{frontmatter.title}</h1>
+                    <p> {frontmatter.role} </p>
+                    <a href={frontmatter.website}>visit</a>
+                    
+
                     <MDXRenderer>{body}</MDXRenderer>
                 </section>
             </MDXProvider>
@@ -43,6 +48,9 @@ export const pageQuery = graphql`
         path
         title
         tags
+        website
+        role
+        github
       }
     }
   }

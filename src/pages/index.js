@@ -20,11 +20,6 @@ const IndexPage = ({ data: {
                     {previews}
                 </div>
             </section>
-            <section id="recentPreview">
-                {/* <div className="list">
-                        <div className="list-item"> testing testing </div>
-                    </div> */}
-            </section>
         </Layout>
     )}
 
