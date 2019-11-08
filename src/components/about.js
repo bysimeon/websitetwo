@@ -16,16 +16,16 @@ const About = ({data}) => {
             </div>
             <div id="about-toggle" className="about-toggle">
                 
-                <div className="about-window">
+                {/* <div className="about-window">
                     <div className="about-window-title">
                         elsewhere
                     </div>
                     <div className="about-window-content">
-                        <a href="">soundcloud</a>
-                        <a href="">are.na</a>
-                        <a href="">pedalroom</a>
-                        <a href="">last.fm</a>
-                        <a href="">github</a>
+                        <a target="_blank" rel="noopener noreferrer" href="">soundcloud</a>
+                        <a target="_blank" rel="noopener noreferrer"  href="">are.na</a>
+                        <a target="_blank" rel="noopener noreferrer"  href="">pedalroom</a>
+                        <a target="_blank" rel="noopener noreferrer" href="">last.fm</a>
+                        <a target="_blank" rel="noopener noreferrer" href="">github</a>
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@ const About = ({data}) => {
                     <div className="about-window-content">
                         
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )
