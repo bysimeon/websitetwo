@@ -785,8 +785,8 @@ pre tt:after {
   border: 0;
   padding: 0;
  
-  background: orange;
-  transition: height ease-in-out 300ms;
+  /* background: orange; */
+  transition: background-color linear 300ms, height ease-in-out 300ms;
   overflow: hidden;
   padding: 1em;
 
@@ -799,15 +799,28 @@ pre tt:after {
   grid-gap: 15px;
 }
 
+@media screen and (max-width: 600px) {
+  .about-toggle {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 .about-toggle a {
   display: inline-block;
   color: black;
   text-decoration: underline;
   background: rgba(255, 255, 255, 0.283);
- padding: 10px;
- border: 1px solid black;
- text-align: center;
- text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+  text-decoration: none;
+  transition-delay: 80ms;
+  transition: background-color linear 220ms, color linear 220ms;
+}
+
+.about-toggle a:hover {
+  background-color: #000;
+  color: white;
 }
 
 #email {
@@ -816,6 +829,7 @@ pre tt:after {
 
 .about-toggle:hover {
   height: 5rem;
+  background-color: white;
 }
 
 .about-window {
@@ -823,7 +837,7 @@ pre tt:after {
 }
 
 .about-window-content {
-background: rgba(255, 255, 255, 0.283);
+ background: rgba(255, 255, 255, 0.283);
  padding: 10px;
  border: 1px solid black;
 }
@@ -860,32 +874,51 @@ background: rgba(255, 255, 255, 0.283);
 }
 
 .project__container a {
-  color: orange;
+  color: black;
 }
 
 .project__container p a {
-  color: orange;
+  color: black;
   font-weight: bold;
-  text-decoration: solid;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
+  transition: padding-bottom 150ms linear, color 150ms linear;
+}
+
+.project__container p a:hover {
+  padding-bottom: 2px;
+  color: gray;
 }
 
 .project__back {
   font-size: 2.5rem;
   text-decoration: none;
   padding-bottom: 20vh;
+  transition: color 150ms linear;
+}
+
+.project__back:hover {
+  color: gray;
 }
 
 .project__h1 {
   display: block;
+  padding-top: 1rem;
   font-size: 8rem;
   margin-right: 2rem;
-  color: rgba(0, 0, 0, .75);
+  color: black;
   /* margin-bottom: 5rem; */
 }
 
 .project__header a {
   font-size: 3rem;
   text-decoration: none;
+  transition: color 150ms linear;
+}
+
+.project__header a:hover {
+  color: gray;
 }
 
 .project__header {
@@ -894,6 +927,7 @@ background: rgba(255, 255, 255, 0.283);
 
 .project__p {
   font-size: 1.1rem;
+  line-height: 1.3em;
   width: 60%;
 }
 
@@ -918,6 +952,11 @@ background: rgba(255, 255, 255, 0.283);
     overflow: hidden;
     text-transform: lowercase;
     box-sizing: border-box;
+    transition: background-color linear 300ms
+}
+
+.banner:hover {
+  background-color: white;
 }
 
 .ticker {
@@ -943,6 +982,8 @@ background: rgba(255, 255, 255, 0.283);
   width: 50%;
   display: flex;
   justify-content: space-evenly;
+  flex-basis: auto;
+  overflow: hidden;
 }
 
 .ticker__item {
