@@ -1,5 +1,14 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../fonts/space.woff") format("woff");
+}
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../fonts/spaceBold.woff") format("woff");
+    font-weight: bold;
+}
+
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -639,11 +648,12 @@ pre tt:after {
 }
 
 .browser-grid {
-  padding: 75vh 1.25vw 1.25vw 1.25vw;
+  padding: 70vh 1.25vw 1.25vw 1.25vw;
   display: grid;
   grid-gap: 1.25vw;
   grid-template-columns: repeat(3, 31.7vw);
   overflow: scroll;
+  margin-bottom: 2em;
 }
 
 .browser {
@@ -836,6 +846,7 @@ background: rgba(255, 255, 255, 0.283);
   max-width: 1200px;
   /* width: 80vw; */
   margin: 1.5em;
+  margin-bottom: 3em;
   padding: 40vh 1.5em 0 1.5em;
 }
 
@@ -886,4 +897,72 @@ background: rgba(255, 255, 255, 0.283);
 /* temporary fix for mdx plugin issue */
 .gatsby-resp-image-background-image {
   display: none !important;
+}
+
+.banner {
+    width: 100vw;
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0rem;
+    height: 2rem;
+    z-index: 101;
+    overflow: hidden;
+    text-transform: lowercase;
+    box-sizing: border-box;
+}
+
+.ticker {
+        display: block;
+        height: 2rem;
+        line-height: 2rem;
+        width: 200%;
+        box-sizing: content-box;
+        position: absolute;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-name: ticker;
+        animation-name: ticker;
+        -webkit-animation-duration: 10s;
+        animation-duration: 10s;
+    }
+
+.ticker span {
+  float: left;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ticker__item {
+    display: inline-block;
+    /* padding: 0 1rem; */
+    color: black;
+}
+
+.ticker__item:last-child {
+    padding: 0 0 0 1rem ;
+}
+.ticker__item:first-child {
+    padding: 0 1rem 0 0;
+}
+
+@-webkit-keyframes ticker {
+    0% {
+        left: 0;
+    }
+    100% {
+       left: -100%;
+    }
+}
+
+@keyframes ticker {
+    0% {
+        left: 0;
+    }
+    100% {
+       left: -100%;
+    }
 }
