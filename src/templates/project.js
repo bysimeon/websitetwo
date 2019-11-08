@@ -22,7 +22,7 @@ const Project = ({ data }) => {
                     h4: props => <h4 {...props} className="project__h4" />,
                     h5: props => <h5 {...props} className="project__h5" />,
                     h6: props => <h6 {...props} className="project__h6" />,
-                    a: props => <a {...props} className="project__a" />,
+                    a: props => <a {...props} target="_blank" rel="noopener noreferrer" className="project__a" />,
                     img: props => <img {...props} className="project__img" />,
                 }}
             >
@@ -36,9 +36,9 @@ const Project = ({ data }) => {
                     </Link> */}
                     <div className="project__header">
                         <h1 className="project__h1">{frontmatter.title}</h1>
-                        <a href={frontmatter.website}>visit</a>
+                        <a target="_blank" rel="noopener noreferrer" href={frontmatter.website}>visit</a>
                         &nbsp;&nbsp;&nbsp;
-                        {frontmatter.github ? (<a href={frontmatter.github}>github</a>) : (<div></div>)}
+                        {frontmatter.github ? (<a target="_blank" rel="noopener noreferrer" href={frontmatter.github}>github</a>) : (<div></div>)}
                     </div>
                     {/* <p> {frontmatter.role} </p> */}
                     <MDXRenderer>{body}</MDXRenderer>
