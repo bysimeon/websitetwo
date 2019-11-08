@@ -11,6 +11,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
 }
 body {
   margin: 0;
@@ -791,22 +792,30 @@ pre tt:after {
 
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  /* box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.55); */
+  /* box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.55); */
 
-  /* display: grid;
+  display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-gap: 15px; */
+  grid-gap: 15px;
 }
 
 .about-toggle a {
   display: inline-block;
   color: black;
-  margin-right: 1em;
   text-decoration: underline;
+  background: rgba(255, 255, 255, 0.283);
+ padding: 10px;
+ border: 1px solid black;
+ text-align: center;
+ text-decoration: none;
+}
+
+#email {
+  grid-column: 7 / 11;
 }
 
 .about-toggle:hover {
-  height: auto;
+  height: 5rem;
 }
 
 .about-window {
@@ -925,8 +934,8 @@ background: rgba(255, 255, 255, 0.283);
         animation-timing-function: linear;
         -webkit-animation-name: ticker;
         animation-name: ticker;
-        -webkit-animation-duration: 10s;
-        animation-duration: 10s;
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
     }
 
 .ticker span {

@@ -11,21 +11,23 @@ const About = ({data}) => {
                     simeon
                 </h1>
                 <p className="large-text inline">
-                    {" "}is a full stack developer* interested in the ways that internet use can change the ways that we think, percieve, behave, identify and learn.
+                    {" "}is a full stack developer* interested in the ways that internet use can change the ways that we think, perceive, behave, identify and learn.
                 </p>
             </div>
             <div id="about-toggle" className="about-toggle">
+                <a target="_blank" rel="noopener noreferrer" href="https://soundcloud.com/bysimeon">soundcloud/&!</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.are.na/s/all?sort=UPDATED_AT">are.na/s*</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.pedalroom.com/bike/-38950">pedal/438672</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.last.fm/user/theblindlookout"> last.fm/thblndlkt</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/bysimeon">github/bysimeon</a>
+                <a id="email" target="_blank" rel="noopener noreferrer" href="mailto:mail@bysimeon.com">mail [at] [this domain] [dot] com</a>
                 
                 {/* <div className="about-window">
                     <div className="about-window-title">
                         elsewhere
                     </div>
                     <div className="about-window-content">
-                        <a target="_blank" rel="noopener noreferrer" href="">soundcloud</a>
-                        <a target="_blank" rel="noopener noreferrer"  href="">are.na</a>
-                        <a target="_blank" rel="noopener noreferrer"  href="">pedalroom</a>
-                        <a target="_blank" rel="noopener noreferrer" href="">last.fm</a>
-                        <a target="_blank" rel="noopener noreferrer" href="">github</a>
+                        
                     </div>
                 </div>
 
