@@ -884,12 +884,6 @@ pre tt:after {
   animation: margin-left 150ms linear;
 }
 
-@media screen and (min-width: 1500px) {
-  .project__container {
-    margin-left: 10vw;
-  }
-}
-
 .project__container a {
   color: var(--text-color);
 }
@@ -952,6 +946,15 @@ pre tt:after {
   border: 1px solid var(--text-color);
   margin: 1em auto 1em 0;
   width: 100%;
+}
+
+@media screen and (min-width: 1500px) {
+  .project__container {
+    margin-left: 10vw;
+  }
+  .project__h1 {
+    font-size: 6rem;
+  }
 }
 
 /* temporary fix for mdx plugin issue */
