@@ -15,6 +15,9 @@ const IndexPage = ({ data: {
     return (
         <Layout>
             <SEO title="home" />
+            <div>
+                {/* about simeon can go here ? */}
+            </div>
             <section id="workPreviews">
                 <div className="browser-grid">
                     {previews}
