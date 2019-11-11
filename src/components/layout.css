@@ -640,7 +640,7 @@ pre tt:after {
 }
 
 .large-text {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .bold {
@@ -807,12 +807,15 @@ pre tt:after {
   background-color: var(--background-color);
 }
 
-@media screen and (max-width: 600px) {
-  .about-toggle {
-    grid-template-columns: repeat(5, 1fr);
-  }
+.sticky-top {
+  top: 0;
+  position: sticky;
+  z-index: 10;
 }
 
+.top {
+  top: 0;
+}
 
 .about-toggle a {
   display: inline-block;
@@ -861,14 +864,17 @@ pre tt:after {
   padding: 10px;
   display: none;
 }
-.sticky-top {
-  top: 0;
-  position: sticky;
-  z-index: 10;
-}
 
-.top {
-  top: 0;
+@media screen and (max-width: 600px) {
+  .about-toggle {
+    height: auto;
+  }
+  #about {
+    font-size: .8rem;
+  }
+  .sticky-top {
+    position: relative;
+  }
 }
 
 .bg-wh {
