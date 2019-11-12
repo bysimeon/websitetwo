@@ -957,9 +957,15 @@ pre tt:after {
   .project__container {
     margin-left: 10vw;
   }
+}
+
+@media screen and (max-width: 500px) {
   .project__h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
+  .project__header {
+  margin-bottom: 2.5rem;
+}
   .project__p {
     width: 90%;
   }
