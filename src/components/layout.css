@@ -673,7 +673,7 @@ pre tt:after {
 
 @media screen and (max-width: 600px) {
   .browser-grid {
-    grid-template-columns: repeat(2, 46.7vw);
+    grid-template-columns: repeat(2, 48.2vw);
   }
   .browser {
     height: 33vw;
