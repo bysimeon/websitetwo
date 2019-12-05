@@ -628,6 +628,12 @@ pre tt:after {
   --background-color: white;
 }
 
+body {
+  color: var(--text-color);
+  border-color: var(--text-color);
+  background:  var(--background-color);
+}
+
 /*  */
 
 .inline-block {
@@ -696,7 +702,7 @@ pre tt:after {
 }
 
 .browser:hover .browser-tab {
-  background-color: #000;
+  background-color: var(--text-color);
 }
 
 .browser:hover .browser-tab-button {
@@ -843,7 +849,7 @@ pre tt:after {
 }
 
 .about-toggle a:hover {
-  background-color: #000;
+  background-color: var(--text-color);
   color: var(--background-color);
 }
 
@@ -904,7 +910,7 @@ pre tt:after {
   color: var(--text-color);
   font-weight: bold;
   text-decoration: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--text-color);
   padding-bottom: 1px;
   transition: padding-bottom 150ms linear, color 150ms linear;
 }
