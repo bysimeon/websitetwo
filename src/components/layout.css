@@ -701,28 +701,28 @@ body {
   transition: opacity 100ms ease-in;
 }
 
-.browser:hover .browser-tab {
+.browser:hover .browser-tab, .browser:focus-within .browser-tab {
   background-color: var(--text-color);
 }
 
-.browser:hover .browser-tab-button {
+.browser:hover .browser-tab-button, .browser:focus-within .browser-tab-button {
   background: var(--background-color);
   border-color: var(--background-color);
 }
 
-.browser:hover .browser-content-image {
+.browser:hover .browser-content-image, .browser:focus-within .browser-content-image {
   opacity: 100;
 }
 
-.browser:hover picture {
+.browser:hover picture, .browser:focus-within picture {
   opacity: 100;
 }
 
-.browser:hover .browser-content-title {
+.browser:hover .browser-content-title, .browser:focus-within .browser-content-title {
   display: none;
 }
 
-.browser:hover .browser-content-link {
+.browser:hover .browser-content-link, .browser:focus-within .browser-content-link {
   opacity: 100;
 }
 
@@ -814,7 +814,7 @@ body {
     display: none; 
 }
 
-.about-toggle:hover {
+.about-toggle:hover, .about-toggle:focus-within {
   height: 2.5em;
   background-color: var(--background-color);
 }
@@ -848,7 +848,7 @@ body {
   /* border-right: 1px solid var(--text-color); */
 }
 
-.about-toggle a:hover {
+.about-toggle a:hover, .about-toggle a:focus {
   background-color: var(--text-color);
   color: var(--background-color);
 }
@@ -915,7 +915,7 @@ body {
   transition: padding-bottom 150ms linear, color 150ms linear;
 }
 
-.project__container p a:hover, .project__container p a:focus {
+.project__container p a:hover, .project__container p a:focus-within {
   padding-bottom: 2px;
   color: gray;
 }
@@ -927,7 +927,7 @@ body {
   transition: color 150ms linear;
 }
 
-.project__back:hover, project__back:focus {
+.project__back:hover, project__back:focus-within {
   color: gray;
 }
 
@@ -946,7 +946,7 @@ body {
   transition: color 150ms linear;
 }
 
-.project__header a:hover, .project__header a:focus  {
+.project__header a:hover, .project__header a:focus-within  {
   color: gray;
 }
 

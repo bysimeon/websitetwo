@@ -6,8 +6,9 @@ const ProjectPreview = ({data}) => {
     const project = data.frontmatter
     return (
         project.tags !== "unreleased" ? (
-            <Link to={project.path}>
-                <div className="browser">
+            
+            <div className="browser">
+                <Link to={project.path}>
                     <div className="browser-tab">
                         <div className="browser-tab-button"></div>
                         <div className="browser-tab-button"></div>
@@ -19,11 +20,13 @@ const ProjectPreview = ({data}) => {
                             {project.title}
                         </div>
                     </div>
-                </div>
-            </Link >
+                </Link >
+            </div>
+            
         ) : (
-            <Link to={project.path}>
-                <div className="browser">
+            
+            <div className="browser" tabIndex="1">
+                <Link to={project.path}>
                     <div className="browser-tab">
                         <div className="browser-tab-button"></div>
                         <div className="browser-tab-button"></div>
@@ -38,8 +41,9 @@ const ProjectPreview = ({data}) => {
                                 unreleased
                         </div> */}
                     </div>
-                </div>
-            </Link >
+                </Link>
+            </div>
+            
         )
     )
 }
