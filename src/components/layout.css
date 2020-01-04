@@ -658,7 +658,7 @@ body {
 }
 
 .browser-grid {
-  padding: calc(50vh + 25vw) 1.25vw 1.25vw 1.25vw;
+  padding: calc(65vh + 25vw) 1.25vw 1.25vw 1.25vw;
   display: grid;
   grid-gap: 1.25vw;
   grid-template-columns: repeat(3, 31.7vw);
