@@ -11,7 +11,7 @@ const About = ({data}) => {
                     simeon
                 </h1>
                 <p className="large-text inline">
-                    {" "}is a full stack developer* interested in the ways that internet use can change the ways that we think, perceive, behave, identify and learn.
+                    {" "} sasterisk fourthreeeightsixseventwo s* theblindlookout &!
                 </p>
             </div>
             <div id="about-toggle" className="about-toggle">

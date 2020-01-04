@@ -658,7 +658,7 @@ body {
 }
 
 .browser-grid {
-  padding: calc(50vh + 10vw) 1.25vw 1.25vw 1.25vw;
+  padding: calc(50vh + 25vw) 1.25vw 1.25vw 1.25vw;
   display: grid;
   grid-gap: 1.25vw;
   grid-template-columns: repeat(3, 31.7vw);
@@ -833,7 +833,7 @@ body {
   display: inline-block;
   color: var(--text-color);
   text-decoration: underline;
-  background: rgba(255, 255, 255, 0.283);
+  /* background: rgba(255, 255, 255, 0.283); */
   padding: .5em 10px;
 
   /* border-right: 1px solid var(--text-color); */
