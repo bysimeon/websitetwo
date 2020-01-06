@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import ProjectPreview from "../components/preview"
 import SEO from "../components/seo"
+import Stream from "../components/stream"
 
 const IndexPage = ({ data: {
     allMdx: { edges },
@@ -15,9 +16,7 @@ const IndexPage = ({ data: {
     return (
         <Layout>
             <SEO title="home" />
-            <div>
-                {/* about simeon can go here ? */}
-            </div>
+            <Stream/>
             <section id="workPreviews">
                 <div className="browser-grid">
                     {previews}
