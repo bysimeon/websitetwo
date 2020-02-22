@@ -657,8 +657,12 @@ body {
   padding: 1em 1em;
 }
 
+.stream-container {
+  height: calc(65vh + 25vw)
+}
+
 .browser-grid {
-  padding: calc(65vh + 25vw) 1.25vw 1.25vw 1.25vw;
+  padding: 1.25vw 1.25vw 1.25vw 1.25vw;
   display: grid;
   grid-gap: 1.25vw;
   grid-template-columns: repeat(3, 31.7vw);
