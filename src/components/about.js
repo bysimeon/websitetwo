@@ -21,6 +21,7 @@ const About = ({data}) => {
                 <a target="_blank" rel="noopener noreferrer" href="https://www.pedalroom.com/bike/-38950">pedal/438672</a>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.last.fm/user/theblindlookout"> last.fm/thblndlkt</a>
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/bysimeon">github/bysimeon</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/lostasterisks">insta/lostasterisks</a>
                 
                 {/* <div className="about-window">
                     <div className="about-window-title">
