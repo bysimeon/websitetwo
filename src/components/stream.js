@@ -1,5 +1,6 @@
 import React from "react"
 import Arena from "are.na"
+import Gallery from "./gallery/index"
 
 const arena = new Arena()
 
@@ -44,7 +45,7 @@ const Stream = ({}) => {
         
     return (
         <div className="stream-container">
-
+            <Gallery />
         </div>
     )
 }
