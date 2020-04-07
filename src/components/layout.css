@@ -658,7 +658,7 @@ body {
 }
 
 .stream-container {
-  height: calc(65vh + 25vw)
+  height: calc(55vh + 25vw)
 }
 
 .browser-grid {
@@ -964,10 +964,15 @@ body {
   width: 60%;
 }
 
+.project__container .gatsby-resp-image-wrapper {
+    margin-bottom: 2em;
+  }
+
 .project__img {
   border: 1px solid var(--text-color);
   margin: 1em auto 1em 0;
   width: 100%;
+  position: relative !important;
 }
 
 @media screen and (min-width: 1500px) {

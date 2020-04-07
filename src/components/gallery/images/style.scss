@@ -11,7 +11,7 @@
     grid-template-columns: repeat(3, 31.7vw);
     grid-gap: 1.25vw;
     overflow: scroll;
-    height: calc(65vh + 25vw);
+    height: calc(55vh + 25vw);
     border-bottom: 1px solid black;
     .image:last-of-type {
         padding-bottom: 1.25vw;
