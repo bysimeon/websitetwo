@@ -801,7 +801,7 @@ body {
   border: 0;
   padding: 0;
 
-  /* background-color: var(--background-color);  */
+  background-color: var(--background-color); 
   transition: background-color linear 300ms, height ease-in-out 300ms;
   overflow-x: scroll;
   overflow-y: hidden;

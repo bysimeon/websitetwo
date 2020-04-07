@@ -40,25 +40,19 @@
     z-index: 10;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
     .images__navigation {
         display: none;
     }
     .images {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-gap: 5vh;
-        margin-bottom: 5vh;
+        grid-template-columns: repeat(1, 96.7vw);
     }
 }
 
 
-@media screen and (max-width: 624px) {
+@media screen and (max-width: 600px) {
     .images {
-        display: grid;
-        grid-template-columns: repeat(2, 2fr);
-        grid-gap: 5vh;
-        margin-bottom: 5vh;
+        grid-template-columns: repeat(2, 48.2vw);
     }
 }
 
