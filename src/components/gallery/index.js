@@ -7,13 +7,14 @@ const Gallery = () => {
     
     const data = useStaticQuery(graphql`
     query {
-  allFile(filter: {relativeDirectory: {eq: "color"}}, sort: {fields: name}) {
+  allFile(filter: {relativeDirectory: {eq: "color"}}, sort: {fields: modifiedTime, order: ASC}) {
     edges {
       node {
         id
         relativeDirectory
         relativePath
         childImageSharp {
+          id
           fluid(maxWidth: 1000, maxHeight: 1000) {
             base64
             tracedSVG
