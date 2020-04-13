@@ -1,10 +1,12 @@
 import React from "react"
+import NowListening from "../components/nowListening"
 
 const Ticker = ({data}) => {
     
 
     return (
         <div className="banner">
+            <NowListening />
             <div className="ticker">
                 <span>
                     <div className="ticker__item"> -- </div>

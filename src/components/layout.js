@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
         <>
             <About />
             <main>{children}</main>
-            <Ticker />
+            {/* <Ticker /> */}
         </>
     )
 }

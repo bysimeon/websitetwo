@@ -1,6 +1,25 @@
-@import "../../variables.scss";
-
 #song a {
-    border-bottom: 0.1em solid $text-color;
+    border-bottom: 0.1em solid #000;
     padding-bottom: 0.3em;
+}
+
+.now-playing {
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    .hidden-link {
+        color: #000;
+        text-decoration: none;
+    }
+    .visible-link {
+        padding-bottom: 1px;
+        border-bottom: 1px solid #000;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+
 }

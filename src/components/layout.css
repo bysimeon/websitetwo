@@ -667,7 +667,7 @@ body {
   grid-gap: 1.25vw;
   grid-template-columns: repeat(3, 31.7vw);
   overflow: scroll;
-  margin-bottom: 2em;
+  margin-bottom: 0rem;
 }
 
 .browser {
@@ -1006,7 +1006,7 @@ body {
     border-top: 1px solid var(--text-color);
     position: fixed;
     bottom: 0rem;
-    height: 2rem;
+    height: 3rem;
     z-index: 101;
     overflow: hidden;
     text-transform: lowercase;
@@ -1019,9 +1019,9 @@ body {
 }
 
 .ticker {
-        display: block;
-        height: 2rem;
-        line-height: 2rem;
+        display: none;
+        height: 3rem;
+        line-height: 3rem;
         width: 200vw;
         box-sizing: content-box;
         position: absolute;

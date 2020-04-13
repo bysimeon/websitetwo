@@ -1,4 +1,5 @@
 import React from "react"
+import NowListening from "../components/nowListening"
 
 const About = ({data}) => {
     

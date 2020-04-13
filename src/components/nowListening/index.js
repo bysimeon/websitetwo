@@ -1,8 +1,7 @@
 import React, { Component } from "react"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import "./style.scss"
 
-const apikey = process.env.REACT_APP_LASTFM_API_KEY
+const apikey = "a7f8dd0989ae6f42d1be2c4427767c6f"
 const apibase = "https://ws.audioscrobbler.com/2.0/"
 const user = "theblindlookout"
 
@@ -15,14 +14,69 @@ class NowListening extends Component {
             songUrl: null,
             artistName: null,
             artistUrl: null,
-            notScrobbling: "nothing, but recently played",
+            notScrobbling: "nothing, but recently heard",
             userProfile: "https://www.last.fm/user/" + user,
-            setInterval: false
+            setInterval: false,
+            limit: 2,
+            recentTracks: null
         }
     }
 
+    getJSON(request) {
+        let xhr = new XMLHttpRequest()
+        xhr.open(
+            "GET",
+            apibase +
+            "?method=user." +
+            request +
+            "&user=" +
+            user +
+            "&limit=" +
+            this.state.limit +
+            "&api_key=" +
+            apikey +
+            "&format=json"
+        )
+        xhr.onload = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    switch (request) {
+                    case "gettopartists":
+                        this.setState({
+                            topArtists: JSON.parse(xhr.responseText)
+                        })
+                        break
+                    case "gettoptracks":
+                        this.setState({
+                            topTracks: JSON.parse(xhr.responseText)
+                        })
+                        break
+                    case "gettopalbums":
+                        this.setState({
+                            topAlbums: JSON.parse(xhr.responseText)
+                        })
+                        break
+                    case "getinfo":
+                        this.setState({
+                            userInfo: JSON.parse(xhr.responseText)
+                        })
+                        break
+                    case "getrecenttracks":
+                        this.setState({
+                            recentTracks: JSON.parse(xhr.responseText)
+                        })
+                        break
+                    default:
+                        break
+                    }
+                }
+            }
+        }
+        xhr.send()
+    }
+
     nowPlaying() {
-        let json = this.props.recentTracks
+        let json = this.state.recentTracks
         if (json) {
             let songName = json.recenttracks.track[0].name
             let artistName = json.recenttracks.track[0].artist["#text"]
@@ -50,10 +104,10 @@ class NowListening extends Component {
             } else {
                 this.setState({
                     playing: false,
-                    songName: null,
-                    artistName: null,
-                    songUrl: null,
-                    artistUrl: null
+                    songName: songName,
+                    artistName: artistName,
+                    songUrl: json.recenttracks.track[0].url,
+                    artistUrl: "https://www.last.fm/music/" + artistName
                 })
             }
         }
@@ -62,8 +116,9 @@ class NowListening extends Component {
     componentDidMount() {
         this.nowPlaying()
         let recentInterval = setInterval(() => {
+            this.getJSON("getrecenttracks")
             this.nowPlaying()
-        }, 80)
+        }, 1000)
         this.setState({
             setInterval: recentInterval
         })
@@ -75,30 +130,41 @@ class NowListening extends Component {
 
     render() {
         return (
-            <div className="corner" id="song">
-                <Link to="/music/" className="hidden-link">
-                    {" "}
-                    listening to:&nbsp;
-                </Link>
-
+            <div className="now-playing">
                 {this.state.playing ? (
-                    <span>
-                        <a id="songName" href={this.state.songUrl}>
+                    <div>
+                        <a href="https://fm.bysimeon.com" className="hidden-link">
                             {" "}
-                            {this.state.songName}{" "}
+                    listening to:{" "}
                         </a>
-                        <span id="filler"> by </span>
-                        <a id="artistName" href={this.state.artistUrl}>
-                            {" "}
-                            {this.state.artistName}
-                        </a>
-                    </span>
+                        <span>
+                            <a className="visible-link" id="songName" href={this.state.songUrl}>
+                                {this.state.songName}
+                            </a>
+                            <span id="filler"> by </span>
+                            <a className="visible-link" id="artistName" href={this.state.artistUrl}>
+                                {this.state.artistName}
+                            </a>
+                        </span>
+                    </div>
                 ) : (
-                    <span>
-                        <Link id="notScrobbling" to="/music/">
-                            {this.state.notScrobbling}
-                        </Link>
-                    </span>
+                    <div>
+                        <a href="https://fm.bysimeon.com" className="hidden-link">
+                            {" "}
+                    last heard:&nbsp;
+                        </a>
+                        <span>
+                            <a id="songName" href={this.state.songUrl}>
+                                {" "}
+                                {this.state.songName}{" "}
+                            </a>
+                            <span id="filler"> by </span>
+                            <a id="artistName" href={this.state.artistUrl}>
+                                {" "}
+                                {this.state.artistName}
+                            </a>
+                        </span>
+                    </div>
                 )}
             </div>
         )
