@@ -16,8 +16,11 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <About />
-            <main>{children}</main>
+            <div className="centered">
+                not here
+            </div>
+            {/* <About /> */}
+            {/* <main>{children}</main> */}
             {/* <Ticker /> */}
         </>
     )

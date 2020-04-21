@@ -16,12 +16,12 @@ const IndexPage = ({ data: {
     return (
         <Layout>
             <SEO title="home" />
-            <Stream/>
+            {/* <Stream/>
             <section id="workPreviews">
                 <div className="browser-grid">
                     {previews}
                 </div>
-            </section>
+            </section> */}
         </Layout>
     )}
 
