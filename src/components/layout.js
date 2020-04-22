@@ -11,13 +11,16 @@ import PropTypes from "prop-types"
 import "./layout.css"
 import About from "../components/about"
 import Ticker from "../components/ticker"
+import NowListening from "../components/nowListening"
+
 
 const Layout = ({ children }) => {
 
     return (
         <>
             <div className="centered">
-                not here
+                not here 
+                <NowListening/>
             </div>
             {/* <About /> */}
             {/* <main>{children}</main> */}

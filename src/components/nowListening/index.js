@@ -149,7 +149,7 @@ class NowListening extends Component {
                     </div>
                 ) : (
                     <div>
-                        <a href="https://fm.bysimeon.com" className="hidden-link">
+                        {/* <a href="https://fm.bysimeon.com" className="hidden-link">
                             {" "}
                     last heard:&nbsp;
                         </a>
@@ -163,7 +163,7 @@ class NowListening extends Component {
                                 {" "}
                                 {this.state.artistName}
                             </a>
-                        </span>
+                        </span> */}
                     </div>
                 )}
             </div>
