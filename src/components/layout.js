@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
                 <NowListening/>
             </div>
             {/* <About /> */}
-            {/* <main>{children}</main> */}
+            <main>{children}</main>
             {/* <Ticker /> */}
         </>
     )
