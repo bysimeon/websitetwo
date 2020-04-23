@@ -135,7 +135,7 @@ class NowListening extends Component {
                     <div>
                         <a href="https://fm.bysimeon.com" className="hidden-link">
                             {" "}
-                    listening to:{" "}
+                            {/* listening to {" "} */}
                         </a>
                         <span>
                             <a className="visible-link" id="songName" href={this.state.songUrl}>

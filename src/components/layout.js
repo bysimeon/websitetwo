@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <div className="centered">
-                not here 
+                ___
                 <NowListening/>
             </div>
             {/* <About /> */}
