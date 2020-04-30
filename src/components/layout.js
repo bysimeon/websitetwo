@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <div className="centered">
-                ___
+                vacant
                 <NowListening/>
             </div>
             {/* <About /> */}
