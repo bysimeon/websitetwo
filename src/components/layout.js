@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
         <>
             <div className="centered">
                 vacant
-                <NowListening/>
+                {/* <NowListening/> */}
             </div>
             {/* <About /> */}
             <main>{children}</main>

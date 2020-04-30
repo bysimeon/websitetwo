@@ -1072,7 +1072,9 @@ body {
 .centered {
   width: 100vw;
   /* min-height: 200vh; */
-  line-height: 50vh;
+  line-height: 100vh;
   font-size: 1rem;
   text-align: center;
+  background-color: black;
+  color: rgb(205, 222, 228);
 }
